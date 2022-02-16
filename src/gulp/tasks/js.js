@@ -8,6 +8,9 @@ export const js = () => {
 				'message': 'Error: <%= error.message %>'
 			})
 		))
+		.pipe(app.plugins.rename({
+			extname: '.min.js'
+		}))
 		.pipe(app.plugins.sourcemaps.init())
 		.pipe(uglify())
 		.pipe(app.plugins.sourcemaps.write('.'))

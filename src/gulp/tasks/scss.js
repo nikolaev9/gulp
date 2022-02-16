@@ -1,6 +1,5 @@
 import dartSass from 'sass'
 import gulpSass from 'gulp-sass'
-import rename from 'gulp-rename'
 import groupCssMedia from 'gulp-group-css-media-queries'
 import cleanCss from 'gulp-clean-css'
 
@@ -20,7 +19,7 @@ export const scss = () => {
 		}, false))
 		.pipe(groupCssMedia())
 		.pipe(cleanCss())
-		.pipe(rename({
+		.pipe(app.plugins.rename({
 			extname: '.min.css'
 		}))
 		.pipe(app.plugins.sourcemaps.write('.'))
