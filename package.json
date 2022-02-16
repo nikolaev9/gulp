@@ -1,0 +1,27 @@
+{
+  "name": "name",
+  "version": "1.0.0",
+  "description": "Описание",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "author": "Author",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-file-include": "latest",
+    "gulp-group-css-media-queries": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-newer": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-svg-sprite": "latest",
+    "sass": "latest"
+  }
+}
