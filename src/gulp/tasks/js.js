@@ -1,3 +1,5 @@
+import uglify from 'gulp-uglify'
+
 export const js = () => {
 	return app.gulp.src(app.path.src.js)
 		.pipe(app.plugins.plumber(
@@ -6,6 +8,9 @@ export const js = () => {
 				'message': 'Error: <%= error.message %>'
 			})
 		))
+		.pipe(app.plugins.sourcemaps.init())
+		.pipe(uglify())
+		.pipe(app.plugins.sourcemaps.write('.'))
 		.pipe(app.gulp.dest(app.path.build.js))
 		.pipe(app.plugins.browsersync.stream())
 }

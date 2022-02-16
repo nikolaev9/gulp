@@ -21,7 +21,9 @@
     "gulp-plumber": "latest",
     "gulp-rename": "latest",
     "gulp-sass": "latest",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "latest",
+    "gulp-uglify": "^3.0.2",
     "sass": "latest"
   }
 }

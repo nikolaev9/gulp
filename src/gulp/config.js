@@ -21,7 +21,7 @@ export const path = {
 		html: src + '/**/*.html',
 		scss: src + '/scss/**/*.scss',
 		images: src + '/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}',
-		js: src + 'js/*.js',
+		js: src + '/js/*.js',
 		sprite: src + '/img/sprite/*.svg'
 	}
 };

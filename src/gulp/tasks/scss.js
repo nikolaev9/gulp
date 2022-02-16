@@ -14,6 +14,7 @@ export const scss = () => {
 				'message': 'Error: <%= error.message %>'
 			})
 		))
+		.pipe(app.plugins.sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}, false))
@@ -22,6 +23,7 @@ export const scss = () => {
 		.pipe(rename({
 			extname: '.min.css'
 		}))
+		.pipe(app.plugins.sourcemaps.write('.'))
 		.pipe(app.gulp.dest(app.path.build.css))
 		.pipe(app.plugins.browsersync.stream())
 }
